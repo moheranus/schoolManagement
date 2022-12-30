@@ -1,0 +1,157 @@
+
+.studentInfo .ant-select-selection {
+    background-color: green !important;
+  }
+
+ .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+   
+    height: 40px;
+    padding: 0;
+    border-color: #00ff4ce5 !important;
+    
+    /* color: rgb(215, 0, 235); */
+    
+} 
+
+.ant-label{
+    color: blueviolet; 
+}
+.ant-option-selector{
+    border-color: 2px solid #00ff4ce5 !important;
+}
+/* .ant-select-selector{
+    padding: 25px !important;
+} */
+
+/* .ant-select-selector{
+    padding: 25px !important;
+    border: 2px solid #00ff4ce5 !important;
+    border-color: 2px solid #00ff4ce5 !important;
+  } */
+  /* .ant-input-selector:hover{
+    border-color: #00ff4ce5 !important;
+  } */
+.tabs{
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+.registerSection{
+    /* #3339cd */
+    background: rgb(24,83,128);
+background: linear-gradient(90deg, rgba(24,83,128,1) 0%, rgba(7,66,157,1) 16%, rgba(0,212,255,1) 100%); 
+height: auto;
+}
+.bodyContainer{
+    color: #fff;
+    padding: 50px;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-areas: "content content"
+                         "content content";
+}
+
+
+.stepbar{
+    font-size: 50px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+
+.stepContainer{
+    border-top-left-radius: 70px;
+    border-bottom-left-radius: 70px;
+   background-color: #fff;
+}
+.ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-tail::after {
+    color: #fff !important;
+  background-color: #fff !important;
+  
+  border: 10px;
+}
+.stepText{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+}
+/* step slider start*/
+/* .ant-steps-item-tail{
+    padding-top: 50px;
+} */
+.ant-steps-item-tail::after{
+    margin-top: 10px;
+    padding-top: 50px;
+    
+
+}
+
+/* .ant-steps-item-process 
+{
+    
+    padding-top: 30px;
+} */
+ /* .ant-steps-item-icon {
+   
+    height: 45px !important;
+    width: 45px !important;
+    border: none;
+    background: rgb(255, 0, 179) !important;
+} */
+
+/* step slider ends */
+  
+  
+
+
+
+
+
+
+
+
+/* step progress */
+
+.studentInfo{
+    
+    padding: 10px;
+}
+.steps-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+
+}
+.steps-actions Button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+    font-size: 17px;
+    font-weight: 300;
+}
+.studentSection{
+ padding: 70px;
+
+}
+.emeregencyInfo{
+    padding: 70px;
+}
+.addressInfo{
+    padding: 70px;
+}
+.steps-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
