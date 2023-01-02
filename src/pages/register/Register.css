@@ -9,8 +9,8 @@
     align-items: center;
     width: 700px;
    
-    height: 40px;
-    padding: 0;
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
     border-color: #00ff4ce5 !important;
     
     /* color: rgb(215, 0, 235); */
@@ -65,8 +65,8 @@ height: auto;
 
 
 .stepContainer{
-    border-top-left-radius: 70px;
-    border-bottom-left-radius: 70px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
    background-color: #fff;
 }
 .ant-steps-item-finish

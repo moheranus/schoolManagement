@@ -2,14 +2,13 @@
 import "./Register.css";
 import React, { useState } from 'react';
 import { Button,
-   message,
-    Steps,
+     message,
+     Steps,
      Breadcrumb,
-    Form, 
-    Input,
-      Checkbox,
-       DatePicker, 
-        Select, Space } from 'antd';
+     Form, 
+     Input,
+     DatePicker, 
+     Select,  } from 'antd';
 
 const steps = [
   
@@ -45,7 +44,7 @@ const steps = [
               ]}
               hasFeedback
             >
-              <Input placeholder="Type first name" />
+              <Input placeholder="Type first name" style={{height:"45px"}} />
             </Form.Item>
             <Form.Item
             style={{width:"700px"}}
@@ -61,7 +60,7 @@ const steps = [
               ]}
               hasFeedback
             >
-              <Input placeholder="Type last name" />
+              <Input placeholder="Type last name"style={{height:"45px"}} />
             </Form.Item>
             <Form.Item
             style={{width:"700px"}}
@@ -76,7 +75,7 @@ const steps = [
               ]}
               hasFeedback
             >
-              <Input placeholder="Type email address" />
+              <Input placeholder="Type email address"style={{height:"45px"}} />
             </Form.Item>
             <Form.Item
             style={{width:"700px"}}
@@ -91,7 +90,7 @@ const steps = [
               ]}
               hasFeedback
             >
-              <Input placeholder="Type phone number" />
+              <Input placeholder="Type phone number" style={{height:"45px"}}/>
             </Form.Item>
   
             
@@ -124,7 +123,7 @@ const steps = [
             hasFeedback
           >
             <DatePicker
-              style={{width:"700px",padding:"15px"}}
+              style={{width:"700px",padding:"10px"}}
               picker="date"
               placeholder="Chose date of birth"
             />
@@ -204,7 +203,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type first name" />
+            <Input placeholder="Type first name"style={{height:"45px"}} />
           </Form.Item>
           <Form.Item
           style={{width:"700px"}}
@@ -220,7 +219,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type last name" />
+            <Input placeholder="Type last name"style={{height:"45px"}} />
           </Form.Item>
           <Form.Item
           style={{width:"700px"}}
@@ -235,7 +234,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type email address" />
+            <Input placeholder="Type email address"style={{height:"45px"}} />
           </Form.Item>
           <Form.Item
           style={{width:"700px"}}
@@ -250,7 +249,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type phone number" />
+            <Input placeholder="Type phone number" style={{height:"45px"}}/>
           </Form.Item>
           <Form.Item name="relationship"
            label={<label style={{ fontSize:"18px",fontWeight:"600", opacity:"0.5" }}>Relationship</label>}
@@ -301,7 +300,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type city name" />
+            <Input placeholder="Type city name" style={{height:"45px"}}/>
           </Form.Item>
           <Form.Item
          style={{width:"700px"}}
@@ -317,7 +316,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type kebele name" />
+            <Input placeholder="Type kebele name"style={{height:"45px"}} />
           </Form.Item>
           
           <Form.Item
@@ -334,7 +333,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type street name" />
+            <Input placeholder="Type street name"style={{height:"45px"}} />
           </Form.Item>
           <Form.Item
           style={{width:"700px"}}
@@ -350,7 +349,7 @@ const steps = [
             ]}
             hasFeedback
           >
-            <Input placeholder="Type House number" />
+            <Input placeholder="Type House number" style={{height:"45px"}}/>
           </Form.Item>
           </Form>
           </div>,

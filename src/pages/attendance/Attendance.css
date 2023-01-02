@@ -1,0 +1,33 @@
+
+
+
+
+.attendanceSection{
+    /* border: 2px solid red; */
+}
+.tabline{
+    margin-top: 20px;
+    
+    border: 2px solid rgb(199, 199, 199);
+}
+.attendanceAction{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+}
+.attendanceAction Form{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attendanceTables{
+    margin-top: 40px;
+    border: 2px solid rgb(199, 199, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
