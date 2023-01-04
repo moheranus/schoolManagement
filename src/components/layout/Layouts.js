@@ -34,6 +34,7 @@ import AttendanceReport from '../../pages/attendance/report/AttendanceReport';
 import FeeSubmission from '../../pages/fee/FeeSubmission';
 import Mark from '../../pages/mark/Mark';
 import RegisterReport from '../../pages/register/RegisterReport';
+import MarkReport from '../../pages/mark/MarkReport';
 const { Header, Sider, Content } = Layout;
 const { Option } = Select;
 function Layouts () {
@@ -67,7 +68,9 @@ const [form] = Form.useForm();
       <Sider trigger={null} collapsible collapsed={collapsed} className="sidebarContainer"
       style={{backgroundColor:"#3339cd "}}
       >
-        <div className="logo">
+        <div className="logo" 
+        style={{marginTop:"20px"}}
+        >
           <h1>SCHOOL</h1>
         </div>
         <Menu
@@ -199,6 +202,45 @@ const [form] = Form.useForm();
           <Row gutter={16}>
             <Col span={12}>
               <Form.Item
+              
+                name="phone"
+                label="Phone number"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please enter student name',
+                  },
+                ]}
+              >
+                <Input placeholder="Enter phone number"style={{width:"300px"}} />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+            <Form.Item
+                name="section"
+                label="Select Section"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please select student Section'
+                  },
+                ]}
+              >
+                <Select placeholder="Please select section"style={{width:"300px"}}>
+                  <Option value="A">A</Option>
+                  <Option value="B">B</Option>
+                  <Option value="C">C</Option>
+                  <Option value="D">D</Option>
+                  <Option value="E">E</Option>
+                  
+                  
+                </Select>
+              </Form.Item>
+            </Col>
+          </Row>
+          <Row gutter={16}>
+            <Col span={12}>
+              <Form.Item
                 name="class"
                 label="Select Class"
                 rules={[
@@ -283,35 +325,51 @@ const [form] = Form.useForm();
             <Col span={12}>
               <Form.Item
               
-                name="form1"
-                label=" Form 1"
+                name="transaction"
+                label="Transaction ID"
                 rules={[
                   {
                     required: true,
-                    message: 'Please enter form 1',
+                    message: 'Please enter transaction Id',
                   },
                 ]}
               >
-                <Input placeholder="Please enter form 1"style={{width:"300px"}} />
+                <Input placeholder="Please enter transaction id"style={{width:"300px"}} />
               </Form.Item>
             </Col>
             <Col span={12}>
             <Form.Item
               
-              name="form2"
-              label="Form 2"
+              name="amounts"
+              label="Amount"
               rules={[
                 {
                   required: true,
-                  message: 'Please enter form 2',
+                  message: 'Please enter amount',
                 },
               ]}
             >
-              <Input placeholder="Please enter form 2"style={{width:"300px"}} />
+              <Input placeholder="Please enter amount"style={{width:"300px"}} />
             </Form.Item>
             </Col>
           </Row>
              :null
+            }
+
+            {feeType==='bank'?
+             <Row gutter={16}>
+             <Col span={24}>
+               <Form.Item
+                 name="description"
+                 label="Description"
+                 
+               >
+                 <Input.TextArea rows={4} placeholder="Please enter description" />
+               </Form.Item>
+             </Col>
+           </Row>
+
+              :null
             }
          
         </Form>
@@ -388,6 +446,7 @@ function Contents (){
           <Route path="/fee" element={<FeeSubmission/>}/>
           <Route path='/mark' element={<Mark/>}/>
           <Route path='/registerReport' element={<RegisterReport/>}/>
+         <Route path='/markReport' element={<MarkReport/>}/>
           
 
 
