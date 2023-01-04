@@ -1,6 +1,6 @@
 import React,{useRef,useState} from 'react'
 import { SearchOutlined } from '@ant-design/icons';
-import "./Attendance.css"
+import "./Mark.css"
 import { Button,
    
   Breadcrumb,
@@ -10,7 +10,7 @@ import { Button,
  DatePicker,
  Space,  Radio,
      
-     Select,Modal  } from 'antd';
+     Select,  } from 'antd';
      import Highlighter from 'react-highlight-words';
 //table data
 
@@ -21,54 +21,42 @@ const data = [
     key: '1',
     fname: 'Daniel',
     lname: 'Shobe',
-    id: 'ets1233/11'
+    firstFive: '3',
     
-   
+    secondFive:'4',
+    firstTen: '8',
+    secondTen: '10',
+    thirdTen: '7',
+    fourthTen: "9",
+    fifty:"40",
+    hundred:"81",
     
   },
   {
     key: '2',
     fname: 'Eliyas',
     lname: 'Asefa',
-    id: 'ets1237/11'
-    
-    
-    
+    present:  '3',
+    absent: '1',
+    late:   '2',
   },
   {
     key: '3',
-    fname: 'Tesfaye',
-    lname: 'Jama',
-    id: 'ets1238/11'
-   
-    
+    fname: 'Mamme',
+    lname: 'Fasil',
+    present:  '4',
+    absent: '0',
+    late:   '1',
   },
   {
     key: '4',
-    fname: 'Mohammed',
-    lname: 'Ahmed',
-    id: 'ets1253/11'
-    
-  
-    
+    fname: 'Tsige',
+    lname: 'Tesema',
+    present:  '3',
+    absent: '0',
+    late:   '2',
   },
-  {
-    key: '5',
-    fname: 'Daniel',
-    lname: 'Shobe',
-    id: 'ets1244/11'
-    
-   
-    
-  },
-  {
-    key: '6',
-    fname: 'Wase',
-    lname: 'Asegid',
-    id: 'ets1253/11'
-    
-    
-  },
+ 
  
 ];
 
@@ -77,37 +65,7 @@ const data = [
 
 
 
-function Attendance() {
-
-//radio
-
-const [value, setValue] = useState(1);
-const onChanged = (e) => {
-  console.log('radio checked', e.target.value);
-  setValue(e.target.value);
-};
-
-
-
-//submit attendance modal
-const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
-  //submit modal ends here
-
-
-
+function Mark() {
   const onChangeDate = (date, dateString) => {
     console.log(date, dateString);
   };
@@ -183,7 +141,19 @@ const onChanges = (date, dateString) => {
           >
             Reset
           </Button>
-          
+          <Button
+            type="link"
+            size="small"
+            onClick={() => {
+              confirm({
+                closeDropdown: false,
+              });
+              setSearchText(selectedKeys[0]);
+              setSearchedColumn(dataIndex);
+            }}
+          >
+            Filter
+          </Button>
           <Button
             type="link"
             size="small"
@@ -230,40 +200,121 @@ const onChanges = (date, dateString) => {
       title: 'First Name',
       dataIndex: 'fname',
       key: 'fname',
-      width: '25%',
+      width: '15%',
       ...getColumnSearchProps('fname'),
     },
     {
       title: 'Last Name',
       dataIndex: 'lname',
       key: 'lname',
-      width: '25%',
+      width: '15%',
       ...getColumnSearchProps('lname'),
     },
     {
-      title: 'Student ID',
-      dataIndex: 'id',
-      key: 'id',
-      width: '25%',
-      ...getColumnSearchProps('lname'),
+      title: 'Mark',
+      dataIndex: 'present',
+      key: 'present',
+      children:[
+        {
+          title: '5',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+          
+
+        },
+        {
+          title: '5',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+        },
+        {
+          title: '10',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+        },
+        {
+          title: '10',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+        },
+        {
+          title: '10',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+        },
+        {
+          title: '10',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+        },
+        {
+          title: '50',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+        },
+        {
+          title: '100',
+          render: (_, record)=>{
+            return(
+              <>
+              <Input type="text" style={{width:"60px"}}></Input>
+              </>
+            )
+          }
+          
+        },
+        {
+          title:"Actions",
+          render: (_, record)=>{
+            return(
+              <>
+              <Button type='link'>Edit</Button>
+              <Button type='link'>Cancel</Button>
+              </>
+            )
+          }
+
+        }
+        
+      ]
+      
     },
-    {
-      title: 'Attendance',
-      dataIndex: 'attendance',
     
-      render: (_, record)=>{
-        return(
-          <>
-          <Radio.Group name="radiogroup" defaultValue={1}>
-    <Radio value={1}>Present</Radio>
-    <Radio value={2}>Absent</Radio>
-    <Radio value={3}>Late</Radio>
-    
-  </Radio.Group>
-          </>
-        )
-      }
-    },
     
     
   ];
@@ -272,9 +323,9 @@ const onChanges = (date, dateString) => {
     <div className='attendanceContainer'>
       <div className='attendanceTabs'>
       <Breadcrumb>
-                        <Breadcrumb.Item>Attendance</Breadcrumb.Item>
+                        <Breadcrumb.Item>Mark</Breadcrumb.Item>
                         <Breadcrumb.Item>
-                        <a href="">Attendance report</a>
+                        <a href="">Mark report</a>
                         </Breadcrumb.Item>
                         
                         
@@ -352,9 +403,9 @@ const onChanges = (date, dateString) => {
 
                                   </Select>
                           </Form.Item>
-                          <Form.Item style={{marginLeft:"40px"}}>
-                          <DatePicker onChange={onChange} />
-                          </Form.Item>
+                          {/* <Form.Item  label='Select Month'style={{marginLeft:"40px"}}> */}
+                          {/* <DatePicker onChange={onChange} picker="month" /> */}
+                          {/* </Form.Item> */}
                           <Form.Item style={{marginLeft:"40px"}}>
                           <Button type="primary"
                           style={{
@@ -382,50 +433,26 @@ const onChanges = (date, dateString) => {
    
     
   }}/>
-  
-  
   <Form.Item style={{
   display:"flex",
   alignItems:"center",
    justifyContent:"center",
 
    }}>
-               <Button type="primary"
-               style={{
-               display:"flex",
-              justifyContent:"center",
-             alignItems:"center",
-              padding:"18px 100px"
+                          <Button type="primary"
+                          style={{
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center",
+                            padding:"18px 100px"
 
-           }} onClick={showModal}>Submit Attendance</Button>
-     </Form.Item>
-     <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-           <p>submit attendance</p>
-      </Modal>
+                            }}>Submit Mark</Button>
+                          </Form.Item>
   </div>
          </div>
       </div>
-      
     </div>
   )
 }
 
-
-
-
-export default Attendance;
-
-
-
-
-// function TableDatas(data){
-//   const [value, setValue] = useState(1);
-//   const onChange = (e) => {
-//     console.log('radio checked', e.target.value);
-//     setValue(e.target.value);
-//   return(
-//     <div>
-//      console.log(data.attendance)
-//     </div>
-//   );
-// }}
+export default Mark;

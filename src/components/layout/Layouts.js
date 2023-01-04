@@ -9,8 +9,11 @@ import {
   DashboardOutlined,
   ContactsOutlined ,
   AuditOutlined,
+  DollarOutlined,
+  MediumOutlined,
+  PlusOutlined
 } from '@ant-design/icons';
-import { Layout, Menu, theme, Avatar } from 'antd';
+import { Layout, Menu, theme, Avatar, Button,Col, DatePicker, Drawer, Form, Input, Row, Select, Space } from 'antd';
 
 import "./Layouts.css";
 import Dashboard from '../dashboard/Dashboard';
@@ -28,15 +31,37 @@ import DropdownProfile from './DropdownProfile';
 import AddClass from '../../pages/course/AddClass';
 import ClassForm from '../../pages/course/ClassForm';
 import AttendanceReport from '../../pages/attendance/report/AttendanceReport';
+import FeeSubmission from '../../pages/fee/FeeSubmission';
+import Mark from '../../pages/mark/Mark';
+import RegisterReport from '../../pages/register/RegisterReport';
 const { Header, Sider, Content } = Layout;
-
+const { Option } = Select;
 function Layouts () {
+
+//form condition
+const [form] = Form.useForm();
+  const feeType = Form.useWatch("feeType", form);
+  const registrationCourse = Form.useWatch("registrationCourse", form);
+
+
   const [openProfile, setOpenProfile] = useState(false);
   const navigate = useNavigate()
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
+
+
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed} className="sidebarContainer"
@@ -99,6 +124,200 @@ function Layouts () {
               icon: <SnippetsOutlined   style={{fontSize:"20px"}}/>,
               // label: 'Course',
               label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Attendance</div>,
+            },
+            // {
+            //   key: '/fee',
+            //   icon: <DollarOutlined  style={{fontSize:"20px"}}/>,
+            //   // label: 'Course',
+            //   label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Fee Submission</div>,
+            // },
+            {
+              key: '/mark',
+              icon: <MediumOutlined  style={{fontSize:"20px"}}/>,
+              // label: 'Course',
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Mark</div>,
+            },
+            {
+              key: '/fee',
+              icon: <DollarOutlined   style={{fontSize:"20px"}}/>,
+              // // label: 'Course',
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center", }}>
+                <Button type="primary" onClick={showDrawer} style={{marginLeft:"-22px"}}>
+                 Fee Submission
+               </Button>
+               label: <div onClick={showDrawer}><p>sdj</p></div>
+               <Drawer
+        title="Fee Submission Form"
+        width={720}
+        onClose={onClose}
+        open={open}
+        bodyStyle={{
+          paddingBottom: 80,
+        }}
+        extra={
+          <Space>
+            <Button onClick={onClose} style={{padding:"2px 20px"}} >Cancel</Button>
+            <Button onClick={onClose} type="primary" style={{padding:"2px 20px"}}>
+              Submit
+            </Button>
+          </Space>
+        }
+      >
+        <Form layout="vertical" hideRequiredMark form={form}>
+          <Row gutter={16}>
+            <Col span={12}>
+              <Form.Item
+              
+                name="fname"
+                label=" First Name"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please enter student first name',
+                  },
+                ]}
+              >
+                <Input placeholder="Please enter student first name"style={{width:"300px"}} />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+            <Form.Item
+              
+              name="lname"
+              label="Last Name"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please enter student last name',
+                },
+              ]}
+            >
+              <Input placeholder="Please enter student last name"style={{width:"300px"}} />
+            </Form.Item>
+            </Col>
+          </Row>
+          <Row gutter={16}>
+            <Col span={12}>
+              <Form.Item
+                name="class"
+                label="Select Class"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please select student class',
+                  },
+                ]}
+              >
+                <Select placeholder="Please select class"style={{width:"300px"}}>
+                  <Option value="1st">1st</Option>
+                  <Option value="2nd">2nd</Option>
+                  <Option value="3rd">3rd</Option>
+                  <Option value="4th">4th</Option>
+                  <Option value="5th">5th</Option>
+                  <Option value="6th">6th</Option>
+                  <Option value="7th">7th</Option>
+                  <Option value="8th">8th</Option>
+                  
+                </Select>
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+              <Form.Item
+                name={'feeType'}
+                label="payment method"
+                rules={[  
+                  {
+                    required: true,
+                    message: 'Please choose payment type',
+                  },
+                ]}
+              >
+                <Select placeholder="Please choose payment type "name={'feeType'}style={{width:"300px"}}>
+                  <Option value="cash">Cash</Option>
+                  <Option value="bank">Bank</Option>
+                </Select>
+              </Form.Item>
+            </Col>
+          </Row>
+            {
+              feeType==='cash'?
+              <Row gutter={16}>
+            <Col span={12}>
+              <Form.Item
+              
+                name="amount"
+                label=" Amount"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please enter amount in number',
+                  },
+                ]}
+              >
+                <Input placeholder="Please enter amount in number "style={{width:"300px"}} />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+            <Row gutter={16}>
+            <Col span={24}>
+              <Form.Item
+                name="description"
+                label="Description"
+                rules={[
+                  {
+                    required: true,
+                    message: 'please enter url description',
+                  },
+                ]}
+              >
+                <Input.TextArea rows={2} placeholder="" />
+              </Form.Item>
+            </Col>
+          </Row>
+            </Col>
+          </Row>:null
+            }
+           {
+              feeType==='bank'?
+              <Row gutter={16}>
+            <Col span={12}>
+              <Form.Item
+              
+                name="form1"
+                label=" Form 1"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please enter form 1',
+                  },
+                ]}
+              >
+                <Input placeholder="Please enter form 1"style={{width:"300px"}} />
+              </Form.Item>
+            </Col>
+            <Col span={12}>
+            <Form.Item
+              
+              name="form2"
+              label="Form 2"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please enter form 2',
+                },
+              ]}
+            >
+              <Input placeholder="Please enter form 2"style={{width:"300px"}} />
+            </Form.Item>
+            </Col>
+          </Row>
+             :null
+            }
+         
+        </Form>
+      </Drawer>
+              </div>,
+              
             },
             
           ]}
@@ -165,7 +384,11 @@ function Contents (){
           <Route path='/addclass' element={<AddClass/>}/>
           <Route path='/classform' element={<ClassForm/>}/>
           <Route path='/teacher' element={<Teacher/>}/>
-          <Route pathe='/areport' element={<AttendanceReport/>}/>
+          <Route path='/areport' element={<AttendanceReport/>}/>
+          <Route path="/fee" element={<FeeSubmission/>}/>
+          <Route path='/mark' element={<Mark/>}/>
+          <Route path='/registerReport' element={<RegisterReport/>}/>
+          
 
 
       
