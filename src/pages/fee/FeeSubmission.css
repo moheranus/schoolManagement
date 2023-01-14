@@ -1,0 +1,180 @@
+
+
+.feeContainer{
+    background-color: #f8f8f8;
+    display: block;
+    
+}
+.feeButton{
+    float: right;
+    margin-top: 20px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    
+}
+
+.feeReportContainer{
+ display: flex;
+
+ 
+  width: 100%;
+  /* border: 2px solid red; */
+  
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.totalMoney{
+    height: 150px;
+    width: 200px;
+    display: block;
+    
+    background-color: #3339cd;
+    color: #fff;
+    /* margin-top: 30px; */
+    
+    margin-left: 100px;
+    border-radius: 10px;
+}
+.totalMoney .tit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.totalMoney .tit p
+{
+ font-size: 18px;
+ font-weight: 600;
+}
+.totalMoney  .amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.totalMoney  .amount p{
+ font-size: 25px;
+ font-weight: 700;
+}
+.totalStudent .tit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.totalStudent .tit p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.totalStudent .amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.totalStudent .amount p{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.totalStudent{
+    height: 150px;
+    width: 200px;
+    display: block;
+    background-color: #3339cd;
+    color: #fff;
+    /* margin-top: 30px; */
+    
+    margin-left: 100px;
+    border-radius: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+.stat{
+    display: flex;
+   background-color: #f8f8f8;
+   padding: 10px;
+}
+
+.reportAction{
+    background-color: #fff;
+    
+}
+.reportActionTitle{
+    
+    margin-left: 300px;
+    margin-top: 30px;
+}
+.reportActionTitle p{
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+.reportFilter Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reportTables{
+   
+    background-color: #fff;
+}
+.tableCont{
+    padding-top: 30px;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .feeReportAction{
+    display: flex;
+    
+    float: right;
+    margin-left: 100px;
+    border: 2px solid red;
+} */
+
+
+
+
+/* .totalMoney{
+    
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    margin-top: 30px;
+    margin-left: 100px;
+   
+}
+.totalStudent{
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    margin-right: 300px;
+}
+.feeReportAction{
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+    margin-right: 300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+} */

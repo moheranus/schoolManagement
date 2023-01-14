@@ -1,0 +1,127 @@
+
+
+
+.loginTotalCon{
+    width: 84vw;
+    height: 80vh;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    
+}
+
+.stepSideCon{
+    height: 75vh;
+    width: 400px;
+    background-color: #5b5f97;
+    /* background-color: #f0f0f0; */
+    border-radius: 1px 20px 20px 1px;
+}
+.stepSideCon ul{
+    margin-top: 150px;
+    margin-left: 20px;
+}
+.stepSideCon ul li{
+   list-style-type: none; 
+   color: #fff;
+   font-size: 20px;
+   font-weight: 600;
+   margin-top: 120px;
+}
+.setDropTitle p{
+    font-size: 25px;
+    font-weight: 600;
+    opacity: 0.5;
+    color: #5b5f97;
+    transform: rotate(-90deg);
+}
+
+.stepDrop{
+    height: 75vh;
+    width: 700px;
+    /* background-color: #3339cd; */
+    /* background-color: #f0f0f0; */
+    background-color: #5b5f97;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -300px;
+}
+.setDropTitle{
+    background-color: #fff;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepFormCon{
+    width: 1200PX;
+    height: 600PX;
+    background-color: #fff;
+    margin-top: 60px;
+    margin-left: -200px;
+    position: relative;
+    margin-right: -400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    
+
+}
+.stepFormCon .ant-steps-item-process .ant-steps-item-icon { 
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 12px; */
+    font-size: 25px;
+    margin-left: -25px;
+    /* margin-top: 70px; */
+    background-color: #5b5f97;
+    border: none;
+ }
+ .stepFormCon .ant-steps-onChange{
+    background-color: #5b5f97;
+ }
+.stepGap .ant-steps-item-icon {
+    height: 60px;
+    width: 60px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    font-size: 25px;
+    margin-left: -25px;
+    /* background-color: #5b5f97; */
+    border: none;
+}
+
+.stepFormHolder{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+    margin-right: 500px;
+}
+.stepFormHolder .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
+    
+    
+} 
+/* .stepFormHolder [title="Student Phone"] {
+    color: blue !important;
+  } */

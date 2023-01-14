@@ -10,13 +10,28 @@ import { Button,
      DatePicker, 
      Select,  } from 'antd';
 
+
+
+// const [register, setRegister] = useState({
+//   fname:"",
+//   lname:"",
+//   email:"",
+//   tele:"",
+// })
+
+
+
+
+
 const steps = [
+  
   
         { 
           // STUDENT DETAIL
           title: <div className="stepText">Student Detail</div>,
           content: <div className='studentInfo'>
                 <Form
+                
             
             autoComplete="off"
             labelCol={{ span: 5 }}
@@ -361,6 +376,18 @@ const steps = [
 
 
 function Register() {
+ // console log register form
+
+
+
+
+
+
+
+
+
+
+
         const [current, setCurrent] = useState(0);
         const next = () => {
           setCurrent(current + 1);
@@ -387,29 +414,7 @@ function Register() {
           <div className='bodyContainer'>
         
              <div className='stepbar'>
-             {/* <Steps
-                direction="vertical"
-                size="default"
-                color="#fff"
-                current={1}
-                
-                items={[
-                        
-                        {
-                                title: <div className='stepText'>step one</div>,
-                                content:<div className='registerContainers'>conten 1</div>
-                                
-                        },
-                        {
-                                title: <div className='stepText'>step two</div>,
-                                
-                        },
-                        {
-                                title: <div className='stepText'>step three</div>,
-                                
-                        },
-                        ]}
-             /> */}
+               
               <Steps current={current} items={items} className="registervertical" direction="vertical" />
              </div>
              <div className='stepContainer'>

@@ -7,6 +7,11 @@ import { Button, Form, Input,Select,  } from 'antd';
 
 
 function Teacher() {
+
+const onFinish=(e)=>{
+  console.log(e)
+}
+
   const [form] = Form.useForm();
   const teacher = Form.useWatch("teacher", form);
   return (
@@ -16,7 +21,7 @@ function Teacher() {
                      <div className="teacherInfo">
                             <h2>Add Teacher</h2>
                             <div className="teacherAction">
-                                   <Form form={form} >
+                                   <Form form={form} onFinish={onFinish} >
                                          <Form.Item name={'teacher'}>
                                          <Select
                                               style={{width:"300px",border:"none", marginLeft:"40px"}}
@@ -138,7 +143,7 @@ function Teacher() {
                       
                             {teacher==='registerTeacher'?
                           <Form.Item
-                          label='First Name' name={'specify'}>
+                          label='First Name' name='fname'>
                             <Input placeholder='please enter course name'style={{width:"300px"}}/>
                           </Form.Item>
         
@@ -146,7 +151,7 @@ function Teacher() {
                        :null}
                        {teacher==='registerTeacher'?
                           <Form.Item
-                          label='Last Name' name={'specify'}>
+                          label='Last Name' name='lname'>
                             <Input placeholder='please enter course name'style={{width:"300px"}}/>
                           </Form.Item>
         

@@ -9,15 +9,20 @@
     z-index: 100;
     /* z-index: 10000; */
 }
+
+
 .dropDownProfile ul li{
  list-style-type: none;
+
 
 
 }
 .dropDownProfile ul li:hover{
  cursor: pointer;
  color: #fd00f1;
+ 
 }
+
 .dropDownProfile::before{
     content: '';
     position: absolute;
@@ -122,6 +127,7 @@ object-fit: cover;
 .editProfileBtn{
     margin-bottom: 70px;
     padding: 0 50px;
+    background-color: #5b5f97;
 }
 
 
@@ -195,4 +201,29 @@ object-fit: cover;
       padding: .2em;
       height: 2em;
     }
-  
+.editProfileForm .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
+    
+    
+}
+.changePwdModal .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
+    
+    
+}
