@@ -5,7 +5,9 @@ import Highlighter from 'react-highlight-words';
 import { Layout, Menu, theme, Avatar, Button,Col, DatePicker, Drawer, Form, Input, Row, Select, Space, Table} from 'antd';
 const { Option } = Select;
 
-
+const onFinish=(e)=>{
+  console.log(e)
+}
 
 const data = [
   
@@ -62,16 +64,7 @@ const data = [
    
     
   },
-  {
-    key: '6',
-    fname: 'Wase',
-    lname: 'Asegid',
-    id: 'ets1253/11',
-    status: ' Not Paid',
-    leftAmount: '5500'
-    
-    
-  },
+  
  
 ];
 
@@ -291,7 +284,7 @@ const onChanges = (date, dateString) => {
           </Space>
         }
       >
-        <Form layout="vertical" hideRequiredMark form={form}>
+        <Form layout="vertical" hideRequiredMark form={form}onFinish={onFinish}>
           
           <Row gutter={16}>
             
@@ -306,7 +299,17 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Select placeholder="Please select section"style={{width:"300px"}}>
+                <Select placeholder="Please select section"style={{
+                  width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"
+                }}
+                name="section"
+                >
                   <Option value="A">A</Option>
                   <Option value="B">B</Option>
                   <Option value="C">C</Option>
@@ -330,7 +333,17 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Select placeholder="Please select class"style={{width:"300px"}}>
+                <Select placeholder="Please select class"style={{
+                  width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"
+                }}
+                name="class"
+                >
                   <Option value="1st">1st</Option>
                   <Option value="2nd">2nd</Option>
                   <Option value="3rd">3rd</Option>
@@ -354,7 +367,15 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Select placeholder="Please choose payment type "name={'feeType'}style={{width:"300px"}}>
+                <Select placeholder="Please choose payment type "name={'feeType'}style={{
+                  width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"
+                  }}>
                   <Option value="cash">Cash</Option>
                   <Option value="bank">Bank</Option>
                 </Select>
@@ -376,7 +397,13 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Input placeholder="Please enter amount in number "style={{width:"300px"}} />
+                <Input placeholder="Please enter amount in number "style={{width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"}} />
               </Form.Item>
             </Col>
             <Col span={12}>
@@ -392,7 +419,17 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Input.TextArea rows={2} placeholder="" />
+                <Input.TextArea rows={2} placeholder="" 
+                style={{
+                  width:"300px",
+                  marginTop:"10px",
+                 
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"
+                }}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -451,7 +488,19 @@ const onChanges = (date, dateString) => {
 
               :null
             }
-         
+          <Button htmlType='submit' type="primary" block
+            style={{
+                float:"right",
+                display:"flex",
+                justifyContent:"center",
+                alignItems:"center",
+                backgroundColor:"#5b5f97 ",
+                width: "100%"
+
+            }}
+            >
+              Submit
+            </Button>
         </Form>
       </Drawer>
           </>
@@ -549,7 +598,13 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Select placeholder="Please select section"style={{width:"300px"}}>
+                <Select placeholder="Please select section"style={{width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"}}>
                   <Option value="A">A</Option>
                   <Option value="B">B</Option>
                   <Option value="C">C</Option>
@@ -573,7 +628,13 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Select placeholder="Please select class"style={{width:"300px"}}>
+                <Select placeholder="Please select class"style={{width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"}}>
                   <Option value="1st">1st</Option>
                   <Option value="2nd">2nd</Option>
                   <Option value="3rd">3rd</Option>
@@ -597,7 +658,13 @@ const onChanges = (date, dateString) => {
                   },
                 ]}
               >
-                <Select placeholder="Please choose payment type "name={'feeType'}style={{width:"300px"}}>
+                <Select placeholder="Please choose payment type "name={'feeType'}style={{width:"300px",
+                  marginTop:"10px",
+                  
+                  
+                  // border:"none",
+                  border: "2px solid #5b5f97",
+                  borderRadius:"10px"}}>
                   <Option value="cash">Cash</Option>
                   <Option value="bank">Bank</Option>
                 </Select>
@@ -694,14 +761,28 @@ const onChanges = (date, dateString) => {
 
               :null
             }
-         
+          <Button htmlType='submit' type="primary" block
+            style={{
+                float:"right",
+                display:"flex",
+                justifyContent:"center",
+                alignItems:"center",
+                backgroundColor:"#5b5f97 ",
+                width: "100%"
+
+            }}
+            >
+              Submit
+            </Button>
         </Form>
       </Drawer>
 
              
          </div>
          {/* FEE BUTTON END */}
+         
          <div className='feeReportContainer'>
+          
              <div className='stat'>
               <div className='totalMoney'>
                 <div className='tit'>
@@ -730,7 +811,10 @@ const onChanges = (date, dateString) => {
                     <Form>
                       <Form.Item label="Class" name={'class'}style={{marginLeft:"30px"}}>
                                   <Select
-                                      style={{width:"170px",border:"none"}}
+                                      style={{width:"170px",
+                                      border:"2px solid #5b5f97",
+                                      borderRadius:"7px",
+                                    }}
                                       placeholder="select Class"
                                       options={[
                                         {
@@ -764,7 +848,10 @@ const onChanges = (date, dateString) => {
                           </Form.Item>
                           <Form.Item label="Section" name={'section'} style={{marginLeft:"30px"}}>
                                   <Select
-                                      style={{width:"170px",border:"none"}}
+                                      style={{width:"170px",
+                                      border:"2px solid #5b5f97",
+                                      borderRadius:"7px",
+                                    }}
                                       placeholder="select section"
                                       options={[
                                         {
@@ -798,7 +885,8 @@ const onChanges = (date, dateString) => {
                           </Form.Item>
                           <Form.Item label="Month" name={'month'} style={{marginLeft:"30px"}}>
                                   <Select
-                                      style={{width:"170px",border:"none"}}
+                                      style={{width:"170px",border:"2px solid #5b5f97",
+                                      borderRadius:"7px",}}
                                       placeholder="select month"
                                       options={[
                                         {
@@ -876,10 +964,17 @@ const onChanges = (date, dateString) => {
               
          </div>
          <div className='reportTables'>
+         <div className='tabline'></div>
           <div className='tableCont'>
              <Table columns={columns} dataSource={data} style={{
-                //  width: '80vw',
                 
+                  width: '85vw',
+                  border: "2px solid #5b5f97",
+                  borderTopLeftRadius:"15px",
+                  borderTopRightRadius:"15px"
+                  
+     
+                 
                 
                 }}/>
                 </div>

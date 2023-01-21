@@ -16,9 +16,11 @@ function Course() {
     <div className='courseSectioncontainer'>
       <div className='CourseTabs'>
                 <Breadcrumb>
-                        <Breadcrumb.Item>Add courses</Breadcrumb.Item>
+                <Breadcrumb.Item>
+                        <a href="/course">Add Course</a>
+                        </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                        <a href="">Add Class</a>
+                        <a href="/addclass">Add Class</a>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>
                         <a href="">Report</a>

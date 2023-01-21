@@ -171,7 +171,7 @@ function DropdownProfile() {
                   
                   
                     placeholder="Enter first name"
-                  name={'fname'} rules={[{
+                  name={'phone'} rules={[{
                     required: true,
                     type:'text',
                     message:'Please enter phone  number'
@@ -233,7 +233,7 @@ function DropdownProfile() {
                     placeholder="Enter Old password"
                   name={'oldPassword'} rules={[{
                     required: true,
-                    type:'text',
+                    type:'password',
                     message:'Please enter new password'
                   }]}
                   >
@@ -260,7 +260,7 @@ function DropdownProfile() {
                     placeholder="Enter new Password"
                   name={'newPassword'} rules={[{
                     required: true,
-                    type:'text',
+                    type:'password',
                     message:'Please enter new password'
                   }]}
                   >
@@ -285,9 +285,9 @@ function DropdownProfile() {
                   
                   
                     placeholder=" confirm password"
-                  name={'fname'} rules={[{
+                  name={'cPassword'} rules={[{
                     required: true,
-                    type:'text',
+                    type:'password',
                     message:'Please confirm the password'
                   }]}
                   >

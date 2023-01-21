@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Login.css"
-import {Steps, Form, Input, Button, DatePicker, Select,message,} from "antd";
-function Login() {
+import {Steps, Form, Input, Button, DatePicker, Select,message,Breadcrumb} from "antd";
+function LoginReg() {
 const [current, setCurrent] = useState(0);
 const [registerDetails, setRegisterDetails] = useState(null);
 const [assignSection, setAssignSection] = useState(null);
@@ -9,28 +9,45 @@ const [emeregencyContact, setEmeregencyContact] = useState(null);
 const [address, setAddress]=useState(null);
 const [Previous, setPrevious] = useState(null);
 
-const prev=(values)=>{
-  setCurrent(-1);
-}
+// lets check if we can capture the value of selct
+
+
+
+
+
+
+
+// end of checking the select valut
+
+
+
+
+
+
 
 const onFinishRegister=(values)=>{
+ 
   setRegisterDetails(values);
   setCurrent(1);
+  console.log(values)
 };
 
 const onFinishSection=(values)=>{
   setAssignSection(values);
   setCurrent(2);
+  console.log(values);
 };
 
 const onFinishEmeregency=(values)=>{
   setEmeregencyContact(values);
   setCurrent(3);
+  console.log(values)
 }
 
 const onFinishAddress=(values)=>{
   setAddress(values);
   setCurrent(4);
+  console.log(values)
 }
 const forms = [
   <StudentDetails onFinish={onFinishRegister}/>,
@@ -45,7 +62,26 @@ const forms = [
 
 
   return (
+    <>
+    <div className='regTabs'>
+    <Breadcrumb>
+    <Breadcrumb.Item>
+                    <a href="/loginreg">Register</a>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                    <a href="/registerreporter">Database</a>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                    <a href="/registerReport">Report</a>
+                    </Breadcrumb.Item>
+                    
+                    
+                    
+            </Breadcrumb>
+    </div>
+    {/* <div className='tabline'></div>  */}
     <div className='loginTotalCon'>
+     
            <div className='stepSideCon'>
              <ul>
               <li>Student Detail</li>
@@ -71,6 +107,7 @@ const forms = [
             </div>
            </div>
     </div>
+    </>
   )
 }
 function StudentDetails({onFinish}){
@@ -182,6 +219,7 @@ function AssignSection({onFinish}){
   return(
     <div className='stepFormHolder'>
   <Form onFinish={onFinish}>
+   
       <Form.Item 
          label={<label style={{ 
           color: "#3a3c5a",
@@ -193,15 +231,22 @@ function AssignSection({onFinish}){
           >Date of Birth</label>}
       >
 
-        <DatePicker style={{
+        <DatePicker 
+        
+        style={{
             width:"400px",
             height:"43px",
             fontSize:"20px",
             border:"2px solid #5b5f97",
             
-            }} required/>
+            }} required
+            onChange={(text, index) => {
+              console.log(index.children);
+              }}
+            />
       </Form.Item>
       <Form.Item
+      
       label={<label style={{ 
         color: "#3a3c5a",
          fontSize:"19px", 
@@ -212,7 +257,11 @@ function AssignSection({onFinish}){
         >Gender</label>}
 
       >
+        
         <Select placeholder="Select gender"required
+        onChange={(text, index) => {
+          console.log(index.children);
+          }}
             size="large"
             style={{
               width:"400px",
@@ -241,6 +290,9 @@ function AssignSection({onFinish}){
       >
         <Select placeholder="Select Class"required
             size="large"
+            onChange={(text, index) => {
+              console.log(index.children);
+              }}
             style={{
               width:"400px",
               marginLeft:"55px",
@@ -272,7 +324,10 @@ function AssignSection({onFinish}){
         >Section</label>}
       >
 
-<Select placeholder="Select Section"required
+<Select name="section" placeholder="Select Section"required
+            onChange={(text, index) => {
+              console.log(index.children);
+              }}
             size="large"
             style={{
               width:"400px",
@@ -293,6 +348,7 @@ function AssignSection({onFinish}){
             </Select>
       </Form.Item>
     <Button type="primary" htmlType='submit'
+    
     style={{
       width:"400px",
       marginLeft:"115px",
@@ -544,4 +600,4 @@ function Address({onFinish}){
    )
 }
 
-export default Login
+export default LoginReg

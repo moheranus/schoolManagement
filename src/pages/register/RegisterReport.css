@@ -1,0 +1,17 @@
+.tableCons .ant-table-thead .ant-table-cell {
+    background-color: #5b5f97;
+    color: #fff;
+    font-size: 20px;
+  }
+
+
+  .ant-table-thead .ant-table-cell {
+    background-color: #5b5f97;
+    color: #fff;
+    font-size: 18px;
+  }
+  .ant-table-row {
+    font-size: 20px;
+    height: 64px;
+    color: #5b5f97;
+  }

@@ -1,0 +1,60 @@
+
+
+.markTabs{
+    margin-bottom: 30px;
+    
+}
+.markTabs  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+}
+
+.markActions{
+    margin-bottom: 40px;
+    float: right;
+}
+.markActions .ActionCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.markActions .ActionCon p{
+    font-size: 19px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #0363bd;
+}
+ .markActions .ActionCon .ant-select-selector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 2px solid #5b5f97;
+    font-size: 19px;
+ }
+ .markActions .ActionCon span.ant-select-selection-item{
+    color: #5b5f97;
+ }
+
+.markActions .ActionCon.ant-table-wrapper {
+    border-bottom: 7px solid #f0f0f0;
+  }
+
+  .markActions .ActionCon Table>thead > tr > th{
+      background-color: red;
+    }
+.markTable .ant-table-thead .ant-table-cell {
+    background-color: #0D4C92;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    
+  }
+.markTable .ant-table{
+    border: 2px solid #5b5f97;
+}

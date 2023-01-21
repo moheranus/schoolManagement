@@ -229,9 +229,11 @@ const onChanges = (date, dateString) => {
     <div className='attendanceContainer'>
       <div className='attendanceTabs'>
       <Breadcrumb>
-                        <Breadcrumb.Item>Attendance</Breadcrumb.Item>
+                         <Breadcrumb.Item>
+                        <a href="/attendance">Attendance</a>
+                        </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                        <a href="">Attendance report</a>
+                        <a href="/schedule">Attendance report</a>
                         </Breadcrumb.Item>
                         
                         
@@ -318,9 +320,26 @@ const onChanges = (date, dateString) => {
                             display:"flex",
                             justifyContent:"center",
                             alignItems:"center",
-                            padding:"18px 30px"
-
+                            padding:"18px 30px",
+                            float:"right"
                             }}>Filter</Button>
+                          </Form.Item>
+                             <Form.Item style={{
+                          display:"flex",
+                          alignItems:"center",
+                          justifyContent:"center",
+
+                          }}>
+                          <Button type="primary"
+                          style={{
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center",
+                            marginLeft:"20px",
+                            marginRight:"-250px",
+                            padding:"18px 40px"
+
+                            }}>Print Attendance</Button>
                           </Form.Item>
              </Form>
          </div>
@@ -333,27 +352,15 @@ const onChanges = (date, dateString) => {
   
 
       </div>
+      <div className='attendReport'>
   <Table columns={columns} dataSource={data} style={{
-    width: '80vw',
+    width: '85.2vw',
     
    
     
   }}/>
-  <Form.Item style={{
-  display:"flex",
-  alignItems:"center",
-   justifyContent:"center",
-
-   }}>
-                          <Button type="primary"
-                          style={{
-                            display:"flex",
-                            justifyContent:"center",
-                            alignItems:"center",
-                            padding:"18px 100px"
-
-                            }}>Print Attendance</Button>
-                          </Form.Item>
+  </div>
+ 
   </div>
          </div>
       </div>

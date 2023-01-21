@@ -18,7 +18,22 @@ function AddClass() {
 
   return (
     <>
+    <div className='CourseTabs'>
+                <Breadcrumb>
+                <Breadcrumb.Item>
+                        <a href="/course">Add Course</a>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                        <a href="/addclass">Add Class</a>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                        <a href="">Report</a>
+                        </Breadcrumb.Item>
+                        
+                </Breadcrumb>
+                </div>
     <div className='classSection'>
+      
     <div className='addClassSection'>
         <div className='classInfo'>
              <div className='classAction' >

@@ -69,6 +69,7 @@
     margin-right: -400px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
+    border-radius: 10px;
     
 
 }
@@ -125,3 +126,15 @@
 /* .stepFormHolder [title="Student Phone"] {
     color: blue !important;
   } */
+
+.ant-drawer-title{
+    color: #5b5f97 !important;
+    font-size: 23px !important;
+    font-weight: 600 !important;
+}
+.anticon-close{
+    color: #e40026;
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 800 !important;
+}

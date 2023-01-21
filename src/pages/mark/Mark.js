@@ -196,20 +196,26 @@ const onChanges = (date, dateString) => {
       ),
   });
   const columns = [
-    {
-      title: 'First Name',
-      dataIndex: 'fname',
-      key: 'fname',
-      width: '15%',
-      ...getColumnSearchProps('fname'),
+    { 
+      title:"Name",
+      children:[
+        {
+          title: 'First Name',
+          dataIndex: 'fname',
+          key: 'fname',
+          width: '10%',
+          ...getColumnSearchProps('fname'),
+        },
+        {
+          title: 'Last Name',
+          dataIndex: 'lname',
+          key: 'lname',
+          width: '10%',
+          ...getColumnSearchProps('lname'),
+        },
+      ]
     },
-    {
-      title: 'Last Name',
-      dataIndex: 'lname',
-      key: 'lname',
-      width: '15%',
-      ...getColumnSearchProps('lname'),
-    },
+    
     {
       title: 'Mark',
       dataIndex: 'present',
@@ -322,10 +328,12 @@ const onChanges = (date, dateString) => {
   return (
     <div className='attendanceContainer'>
       <div className='attendanceTabs'>
-      <Breadcrumb>
-                        <Breadcrumb.Item>Mark</Breadcrumb.Item>
+      <Breadcrumb>      <Breadcrumb.Item>
+                        <a href="/mark">Mark report</a>
+                        </Breadcrumb.Item>
+                        
                         <Breadcrumb.Item>
-                        <a href="">Mark report</a>
+                        <a href="/markReport">Mark report</a>
                         </Breadcrumb.Item>
                         
                         

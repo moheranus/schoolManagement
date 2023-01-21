@@ -1,9 +1,9 @@
 import React from "react";
 
-import { Table } from "antd";
+import { Table, Breadcrumb,Form, Button, Select } from "antd";
 import "antd/dist/reset.css";
 
-
+import "./Mark.css"
 const MarkReport = () => {
   const columns = [
    
@@ -73,7 +73,7 @@ const MarkReport = () => {
       
     },
     {
-      no: '1',
+      no: '2',
       name: 'Daniel',
       id: 'ets4545/11',
       grade: '7',
@@ -83,7 +83,7 @@ const MarkReport = () => {
       
     },
     {
-      no: '1',
+      no: '3',
       name: 'Daniel',
       id: 'ets4545/11',
       grade: '7',
@@ -93,7 +93,7 @@ const MarkReport = () => {
       
     },
     {
-      no: '1',
+      no: '4',
       name: 'Daniel',
       id: 'ets4545/11',
       grade: '7',
@@ -105,11 +105,114 @@ const MarkReport = () => {
   ];
 
   return (
+    <>
+    <div className='attendanceTabs'>
+      <Breadcrumb>
+      <Breadcrumb.Item>
+                        <a href="/mark">Mark report</a>
+                        </Breadcrumb.Item>
+                        <Breadcrumb.Item>
+                        <a href="/markReport">Mark report</a>
+                        </Breadcrumb.Item>
+                        
+                        
+                </Breadcrumb>
+      </div>
+      <div className='tabline'></div>
+      <div className='markReportAction'>
+             <Form>
+                      <Form.Item label="Class" name={'class'}>
+                                  <Select
+                                      style={{width:"250px",border:"none"}}
+                                      placeholder="select Class"
+                                      options={[
+                                        {
+                                          label:'1',
+                                          value:'1'
+                                        },
+                                        {
+                                          label:'2',
+                                          value:'2'                  
+                                        },
+                                        {
+                                          label:'3',
+                                          value:'3'
+                                        },
+                                        {
+                                          label:'4',
+                                          value:'4'                  
+                                        },
+                                        {
+                                          label:'5',
+                                          value:'5'
+                                        },
+                                        {
+                                          label:'6',
+                                          value:'6'                  
+                                        },
+                                        
+                                      ]}>
+
+                                  </Select>
+                          </Form.Item>
+                          <Form.Item label="Section" name={'section'} style={{marginLeft:"30px"}}>
+                                  <Select
+                                      style={{width:"250px",border:"none"}}
+                                      placeholder="select Class"
+                                      options={[
+                                        {
+                                          label:'A',
+                                          value:'A'
+                                        },
+                                        {
+                                          label:'B',
+                                          value:'B'                  
+                                        },
+                                        {
+                                          label:'C',
+                                          value:'C'
+                                        },
+                                        {
+                                          label:'D',
+                                          value:'D'                  
+                                        },
+                                        {
+                                          label:'E',
+                                          value:'E'
+                                        },
+                                        {
+                                          label:'F',
+                                          value:'F'                  
+                                        },
+                                        
+                                      ]}>
+
+                                  </Select>
+                          </Form.Item>
+                          {/* <Form.Item  label='Select Month'style={{marginLeft:"40px"}}> */}
+                          {/* <DatePicker onChange={onChange} picker="month" /> */}
+                          {/* </Form.Item> */}
+                          <Form.Item style={{marginLeft:"40px"}}>
+                          <Button type="primary"
+                          style={{
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center",
+                            padding:"18px 30px"
+
+                            }}>Filter</Button>
+                          </Form.Item>
+             </Form>
+         </div>
+         <div className="markReporter">
     <Table
       columns={columns}
       dataSource={data}
       // summary={() => <Summary />}
     ></Table>
+    </div>
+
+    </>
   );
 };
 

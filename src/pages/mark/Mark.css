@@ -1,0 +1,15 @@
+.markReportAction{
+    float: right;
+}
+.markReportAction Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.markReporter.ant-table-thead {
+    background-color: #5b5f97;
+    color: #fff;
+    font-size: 18px;
+  }

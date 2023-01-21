@@ -42,3 +42,19 @@ h1{
     cursor: pointer;
     
 }
+.ant-menu-inline .ant-menu-item{
+    height: 60px;
+}
+.ant-menu-submenu-title{
+    height: 60px;
+    margin-inline: -5px;
+    
+}
+.ant-menu-vertical .ant-menu-submenu-title{
+    margin-inline: -9px;
+    margin-block: 22px;
+}
+.ant-menu-vertical > .ant-menu-item,ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title{
+    height: 70px;
+line-height: 57px;
+}

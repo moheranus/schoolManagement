@@ -1,0 +1,210 @@
+
+
+.transcriptTenth{
+    background-color: white;
+	height: auto;
+	width: 100%;
+	/* position: absolute; */
+	/* transform: translate(-50%, -50%);
+	left: 50%;
+	top: 60%; */
+    border: 4px solid #002B5B;
+	display: flex;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.transcriptLeft
+{
+    background-color: #002B5B;
+	width: 300px;
+	height: 100%;
+	float: left;
+	/* border-radius: 10px; */
+}
+.transcriptRight{
+    /* width: 450px; */
+	width: 80%;
+	height: auto;
+	/* border: 2px solid red; */
+	/* float: right; */
+}
+.reportHeader{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-left: 30%; */
+	
+	margin-top: 10px;
+}
+.reportHeader .headerTitle p{
+	font-size: 35px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	color: #472183;
+	letter-spacing: 8px;
+}
+.reportHeaderName .schoolName{
+	margin-top: -20px;
+}
+.reportHeaderName .schoolName p{
+	font-size: 18px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	color: #3c3d50;
+	letter-spacing: 10px;
+}
+
+.reportHeaderName{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-left: 30%; */
+	
+}
+/* .cardTable{
+	border: 2px solid rebeccapurple;
+} */
+.transcriptLeft .studentPhoto{
+    height: 200px;
+	width: 200px;
+	background-color: #ddd;
+	/* border-radius: 50%; */
+	margin-bottom: 20px;
+	margin-left: 40px;
+	border: 10px solid #002B5B;
+	box-shadow: 6px 7px 9px 5px #002B5B;
+}
+.studentPhoto img {
+	position: absolute;
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	box-shadow: 0 0 10px 0 rgba(255,255,255,.35);
+	border-radius: 0px;
+	border-radius: 5px;
+	z-index: 0;
+  }
+
+.studentInfo{
+    position: relative;
+}
+.studentInfo .heading{
+    background-color: #3339cd ;
+    display: flex;
+    /* justify-content: center; */
+	padding: 10px;
+	color: #fff;
+	text-align: left;
+	padding-left: 20px;
+	margin-right: -15px;
+    /* z-index: 2; */
+
+}
+
+
+.heading p{
+	margin-top: 10px;
+	margin-left: 15px;
+	font-size: 17px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+}
+.infoList{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+.infoList .infoName{
+	margin-left: 15px;
+}
+.infoType p{
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	color: rgb(230, 230, 230);
+}
+.infoName p{
+	
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	color: rgb(230, 230, 230);
+}
+
+.cardTable{
+	display: block;
+	
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.tableHead{
+	/* height: 50px; */
+	background-color: #790252;
+	
+}
+.semister{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.subject{
+	border: 2px solid red;
+	width: 200px;
+	padding-top: -20px;
+	margin-left: 20px;
+
+}
+.cardTable .ant-table-cell{
+	padding: auto;
+	font-size: 14px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	color: #393E46;
+}
+
+
+.cardTable .ant-table-body{
+    overflow-y: hidden!important;
+	overflow: hidden;
+}
+.cardTable .ant-table-body:hover{
+    overflow-y: scroll!important;
+}
+.cardTable .ant-table-row {
+	
+	height: 13px;
+	
+	
+  }
+.cardTable .ant-table-thead .ant-table-cell {
+	background-color: #790252;
+	color: #fff;
+	font-size: 17px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+  }
+
+.cardTable .rowClassName1 td:first-child {
+	font-size: 17px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+}
+.cardTable .rowClassName1 td{
+ border: 2px solid #790252;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

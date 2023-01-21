@@ -1,6 +1,7 @@
 import React,{useRef,useState} from 'react'
 import { SearchOutlined } from '@ant-design/icons';
 import "./Attendance.css"
+
 import { Button,
    
   Breadcrumb,
@@ -272,9 +273,11 @@ const onChanges = (date, dateString) => {
     <div className='attendanceContainer'>
       <div className='attendanceTabs'>
       <Breadcrumb>
-                        <Breadcrumb.Item>Attendance</Breadcrumb.Item>
+      <Breadcrumb.Item>
+                        <a href="/attendance">Attendance</a>
+                        </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                        <a href="">Attendance report</a>
+                        <a href="/schedule">Attendance report</a>
                         </Breadcrumb.Item>
                         
                         
@@ -365,6 +368,31 @@ const onChanges = (date, dateString) => {
 
                             }}>Filter</Button>
                           </Form.Item>
+                          <Form.Item style={{
+                        display:"flex",
+                        alignItems:"center",
+                        justifyContent:"center",
+                        marginLeft:"20px"
+
+                        }}>
+               <Button type="primary"
+               style={{
+               display:"flex",
+              justifyContent:"center",
+             alignItems:"center",
+              padding:"18px 100px"
+
+           }} onClick={showModal}>Submit Attendance</Button>
+     </Form.Item>
+     <div className='attendaceModal'>
+     <Modal 
+     mask={false}
+     open={isModalOpen} onOk={handleOk} onCancel={handleCancel}
+     
+     >
+           <p>submit attendance</p>
+      </Modal>
+      </div>
              </Form>
          </div>
          {/* Attendance TABLES HERE */}
@@ -376,32 +404,17 @@ const onChanges = (date, dateString) => {
   
 
       </div>
+      <div className='attendanceTable'>
   <Table columns={columns} dataSource={data} style={{
-    width: '80vw',
+    width: '85.2vw',
     
    
     
   }}/>
+  </div>
   
   
-  <Form.Item style={{
-  display:"flex",
-  alignItems:"center",
-   justifyContent:"center",
-
-   }}>
-               <Button type="primary"
-               style={{
-               display:"flex",
-              justifyContent:"center",
-             alignItems:"center",
-              padding:"18px 100px"
-
-           }} onClick={showModal}>Submit Attendance</Button>
-     </Form.Item>
-     <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-           <p>submit attendance</p>
-      </Modal>
+  
   </div>
          </div>
       </div>

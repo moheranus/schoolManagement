@@ -27,10 +27,10 @@
 
 .totalMoney{
     height: 150px;
-    width: 200px;
+    width: 150px;
     display: block;
     
-    background-color: #3339cd;
+    background-color: #5b5f97;
     color: #fff;
     /* margin-top: 30px; */
     
@@ -79,9 +79,9 @@
 
 .totalStudent{
     height: 150px;
-    width: 200px;
+    width: 150px;
     display: block;
-    background-color: #3339cd;
+    background-color: #5b5f97;
     color: #fff;
     /* margin-top: 30px; */
     
@@ -125,56 +125,50 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-/* .feeReportAction{
-    display: flex;
-    
-    float: right;
-    margin-left: 100px;
-    border: 2px solid red;
-} */
-
-
-
-
-/* .totalMoney{
-    
-    height: 200px;
-    width: 200px;
+.feeContainer .ant-input{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
-    margin-top: 30px;
-    margin-left: 100px;
+    
    
-}
-.totalStudent{
-    margin-top: 30px;
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blueviolet;
-    margin-right: 300px;
-}
-.feeReportAction{
-    margin-top: 30px;
-    height: 200px;
-    width: 200px;
-    margin-right: 300px;
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
     
+    
+} 
+
+.tableCont .ant-table-thead .ant-table-cell {
+    background-color: #5b5f97;
+    color: #fff;
+    font-size: 20px;
+  }
+  .tableCont .ant-table-thead .ant-table-cell {
+    background-color: #5b5f97;
+    color: #fff;
+    font-size: 20px;
+  }
+  .tableCont .ant-table-row {
+    font-size: 20px;
+    height: 64px;
+    color: #5b5f97;
+  }
+  .ant-input{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
-} */
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
+    
+    
+}
+
+
+
+
+

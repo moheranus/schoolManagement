@@ -1,0 +1,84 @@
+
+
+
+
+
+.registerAction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-right: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.registerAction .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 1px solid #5b5f97 !important;
+    
+    /* color: #3a3c5a; */
+    
+    
+} 
+.registerAction Button{
+    background-color: #5b5f97;
+    
+}
+.tableborder .ant-table-thead .ant-table-cell {
+    background-color: #5b5f97;
+    color: #fff;
+    font-size: 20px;
+  }
+  .tableborder .ant-table-row {
+    font-size: 20px;
+    height: 64px;
+    color: #5b5f97;
+  }
+
+
+  .tableborder .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
+    
+    
+} 
+
+.drawerHolder .ant-table .ant-table-container::before,
+.ant-table .ant-table-container::after {
+  width: 0px !important;
+}
+
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+    box-Shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+.editTitle h2{
+    color:#5b5f97;
+    font-weight: 600;
+}
+.editTitle .ant-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    /* height: 10px; */
+    /* padding: 30px 10px !important; */
+    border: 2px solid #5b5f97 !important;
+    /* color: #3a3c5a; */
+    
+    
+} 

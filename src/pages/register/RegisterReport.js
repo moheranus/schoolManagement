@@ -2,6 +2,7 @@ import React from "react";
 
 
 import "antd/dist/reset.css";
+import "./RegisterReport.css"
 import { Button,
    
   Breadcrumb,
@@ -112,10 +113,15 @@ const RegisterReport = () => {
     <>
     <div className='attendanceTabs'>
       <Breadcrumb>
-                        <Breadcrumb.Item>Register</Breadcrumb.Item>
-                        <Breadcrumb.Item>
-                        <a href=""> report</a>
-                        </Breadcrumb.Item>
+      <Breadcrumb.Item>
+                   <a href="/loginreg">Register</a>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                    <a href="/registerreporter">Database</a>
+                    </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                    <a href="/registerReport">Report</a>
+                    </Breadcrumb.Item>
                         
                         
                 </Breadcrumb>
@@ -159,7 +165,7 @@ const RegisterReport = () => {
                           <Form.Item style={{marginLeft:"40px"}}>
                           <Button type="primary"
                           style={{
-
+                            // backgroundColor: "#5b5f97",
                             display:"flex",
                             justifyContent:"center",
                             alignItems:"center",
@@ -170,11 +176,14 @@ const RegisterReport = () => {
       </Form>
 
     </div>
+    <div className="tableCons">
     <Table
+    
       columns={columns}
       dataSource={data}
       summary={() => <Summary />}
     ></Table>
+    </div>
     </>
   );
 };
@@ -182,7 +191,13 @@ const RegisterReport = () => {
 const Summary = () => {
   return (
     <Table.Summary fixed="top">
-      <Table.Summary.Row>
+      <Table.Summary.Row
+      style={{
+        backgroundColor: "#cacaca",
+    color: "#5b5f97",
+    fontSize: "23px",
+      }}
+      >
         <Table.Summary.Cell index={0} colSpan={1}>
           Total
         </Table.Summary.Cell>

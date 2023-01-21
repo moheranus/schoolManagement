@@ -36,6 +36,13 @@ import Mark from '../../pages/mark/Mark';
 import RegisterReport from '../../pages/register/RegisterReport';
 import MarkReport from '../../pages/mark/MarkReport';
 import FeeReport from '../../pages/fee/FeeReport';
+import FormValue from '../../pages/reporter/practice/FormValue';
+import StepValue from '../../pages/reporter/practice/StepValue';
+import RegisterReporter from '../../pages/reporter/practice/RegisterReporter';
+import LoginReg from '../../pages/login/Login';
+import MarkTwo from '../../pages/mark/MarkTwo';
+import TranscriptTenth from '../../pages/mark/TranscriptTenth';
+import StudentResult from '../../pages/mark/StudentResult';
 // import Login from '../loginComponents/Login/LoginForm';
 const { Header, Sider, Content } = Layout;
 const { Option } = Select;
@@ -68,7 +75,7 @@ const [form] = Form.useForm();
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed} className="sidebarContainer"
-      style={{backgroundColor:"#3339cd "}}
+      style={{backgroundColor:"#00005C "}}
       >
         <div className="logo" 
         style={{marginTop:"20px"}}
@@ -84,51 +91,60 @@ const [form] = Form.useForm();
              navigate(key)
           }
         }}
-        style={{marginTop:"35px",backgroundColor:"#3339cd "}}
+        // #3339cd
+        style={{marginTop:"35px",backgroundColor:"#00005C",
+        
+      }}
           theme="dark"
           mode="inline"
           defaultSelectedKeys={['1']}
           
           items={
             
+
+      
+            
             [
            
             {
               key: '/dashboard',
-              icon: <DashboardOutlined style={{fontSize:"20px"}}/>,
+              icon: <DashboardOutlined style={{
+                fontSize:"25px",
+                
+              }}/>,
               // label: 'Dashboard',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Dashboards</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Dashboards</div>,
             },
             {
-              key: '/register',
-              icon: <UsergroupAddOutlined style={{fontSize:"20px"}}/>,
+              key: '/loginreg',
+              icon: <UsergroupAddOutlined style={{fontSize:"25px"}}/>,
               // label: 'Register',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Register</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Register</div>,
               
             },
             {
               key: '/registration',
-              icon: <AuditOutlined style={{fontSize:"20px"}}/>,
+              icon: <AuditOutlined style={{fontSize:"25px"}}/>,
               // label: 'Registration',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Registration</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Registration</div>,
             },
             {
               key: '/course',
-              icon: <ReadOutlined style={{fontSize:"20px"}}/>,
+              icon: <ReadOutlined style={{fontSize:"25px"}}/>,
               // label: 'Course',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Course</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Course</div>,
             },
             {
               key: '/teacher',
-              icon: <ContactsOutlined  style={{fontSize:"20px"}}/>,
+              icon: <ContactsOutlined  style={{fontSize:"25px"}}/>,
               // label: 'Course',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Teacher</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Teacher</div>,
             },
             {
               key: '/attendance',
-              icon: <SnippetsOutlined   style={{fontSize:"20px"}}/>,
+              icon: <SnippetsOutlined   style={{fontSize:"25px"}}/>,
               // label: 'Course',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Attendance</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Attendance</div>,
             },
             // {
             //   key: '/fee',
@@ -138,15 +154,15 @@ const [form] = Form.useForm();
             // },
             {
               key: '/mark',
-              icon: <MediumOutlined  style={{fontSize:"20px"}}/>,
+              icon: <MediumOutlined  style={{fontSize:"25px"}}/>,
               // label: 'Course',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center"}}>Mark</div>,
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px",}}>Mark</div>,
             },
             {
               key: '/fee',
-              icon: <DollarOutlined   style={{fontSize:"20px"}}/>,
+              icon: <DollarOutlined   style={{fontSize:"25px"}}/>,
               // // label: 'Course',
-              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center", }}>Fee Submission
+              label: <div style={{display:"flex",justifyContent:"center", alignItems:"center",fontSize:"18px", }}>Payment
               </div>,
               
             },
@@ -221,8 +237,17 @@ function Contents (){
           <Route path='/registerReport' element={<RegisterReport/>}/>
          <Route path='/markReport' element={<MarkReport/>}/>
          <Route path='/feeReport' element={<FeeReport/>}/>
-         <Route path='/login' element={<Login/>}/>
+         <Route path='/loginreg' element={<LoginReg/>}/>
          {/* <Route path='/login' element={<Login/>}/> */}
+
+         {/* PRACTICE ROUTE */}
+
+         <Route path='/formvalue' element={<FormValue/>}/>
+         <Route path='/stepvalue' element={<StepValue/>}/>
+         <Route path='/registerreporter' element={<RegisterReporter/>}/>
+         <Route path='/marktwo' element={<MarkTwo/>}/>
+         <Route path='/transcripttenth' element={<TranscriptTenth/>}/>
+         <Route path='/studentresult' element={<StudentResult/>}/>
           
 
 
